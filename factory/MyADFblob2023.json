@@ -1,0 +1,9 @@
+{
+	"name": "MyADFblob2023",
+	"location": "canadacentral",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "e7ce1ad3-47c7-40c0-9e46-142ec9ebecfe",
+		"tenantId": "ec1bd924-0a6a-4aa9-aa89-c980316c0449"
+	}
+}
