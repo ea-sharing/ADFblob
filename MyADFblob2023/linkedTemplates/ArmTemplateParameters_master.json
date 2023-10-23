@@ -13,6 +13,12 @@
 		},
 		"trigger1_properties_typeProperties_scope": {
 			"value": "/subscriptions/46144725-e67d-4db1-a949-31ae0f25fb14/resourceGroups/project_resgrp/providers/Microsoft.Storage/storageAccounts/adfblobstorageaccount1"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
 		}
 	}
 }
