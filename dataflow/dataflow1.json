@@ -5,9 +5,9 @@
 		"typeProperties": {
 			"sources": [
 				{
-					"dataset": {
-						"referenceName": "fetch_data",
-						"type": "DatasetReference"
+					"linkedService": {
+						"referenceName": "fetch_csv_file",
+						"type": "LinkedServiceReference"
 					},
 					"name": "source1"
 				}
@@ -15,10 +15,17 @@
 			"sinks": [],
 			"transformations": [],
 			"scriptLines": [
-				"source(allowSchemaDrift: true,",
+				"source(useSchema: false,",
+				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
-				"     limit: 100,",
-				"     ignoreNoFilesFound: false) ~> source1"
+				"     ignoreNoFilesFound: true,",
+				"     format: 'delimited',",
+				"     container: 'inputfolder',",
+				"     columnDelimiter: ',',",
+				"     escapeChar: '\\\\',",
+				"     quoteChar: '\\\"',",
+				"     columnNamesAsHeader: true,",
+				"     wildcardPaths:['*.csv']) ~> source1"
 			]
 		}
 	}
