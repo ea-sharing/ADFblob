@@ -74,27 +74,13 @@
 								"formatSettings": {
 									"type": "DelimitedTextWriteSettings",
 									"quoteAllText": true,
-									"fileExtension": ".txt"
+									"fileExtension": ".csv"
 								}
 							},
 							"enableStaging": false,
 							"validateDataConsistency": false,
 							"translator": {
 								"type": "TabularTranslator",
-								"mappings": [
-									{
-										"source": {
-											"name": "Input 1: 66",
-											"type": "String",
-											"physicalType": "String"
-										},
-										"sink": {
-											"name": "Input 1: 66",
-											"type": "String",
-											"physicalType": "String"
-										}
-									}
-								],
 								"typeConversion": true,
 								"typeConversionSettings": {
 									"allowDataTruncation": true,
@@ -142,6 +128,7 @@
 				"typeProperties": {
 					"location": {
 						"type": "AzureBlobStorageLocation",
+						"fileName": "all_output.csv",
 						"container": "outputfolder"
 					},
 					"columnDelimiter": ",",
