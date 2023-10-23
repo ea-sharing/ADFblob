@@ -10,8 +10,10 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
+				"fileName": "output_1698005272.csv",
 				"container": "inputfolder"
-			}
+			},
+			"firstRowAsHeader": true
 		},
 		"schema": []
 	}
