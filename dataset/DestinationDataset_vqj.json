@@ -13,7 +13,7 @@
 				"fileName": "all_output.csv",
 				"container": "outputfolder"
 			},
-			"columnDelimiter": "",
+			"columnDelimiter": ",",
 			"escapeChar": "\\",
 			"firstRowAsHeader": true,
 			"quoteChar": "\""
