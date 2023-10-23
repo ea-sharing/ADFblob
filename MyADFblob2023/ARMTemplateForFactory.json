@@ -48,7 +48,7 @@
 							},
 							{
 								"name": "Destination",
-								"value": "outputfolder//all_output.xls"
+								"value": "outputfolder//all_output.csv"
 							}
 						],
 						"typeProperties": {
@@ -81,6 +81,20 @@
 							"validateDataConsistency": false,
 							"translator": {
 								"type": "TabularTranslator",
+								"mappings": [
+									{
+										"source": {
+											"name": "Input 1: 66",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "Input 1: 66",
+											"type": "String",
+											"physicalType": "String"
+										}
+									}
+								],
 								"typeConversion": true,
 								"typeConversionSettings": {
 									"allowDataTruncation": true,
@@ -168,7 +182,7 @@
 				"typeProperties": {
 					"location": {
 						"type": "AzureBlobStorageLocation",
-						"fileName": "all_output.xls",
+						"fileName": "all_output.csv",
 						"container": "outputfolder"
 					},
 					"columnDelimiter": ",",
