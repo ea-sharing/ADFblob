@@ -3,7 +3,14 @@
 	"properties": {
 		"annotations": [],
 		"runtimeState": "Started",
-		"pipelines": [],
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "MergePipeline_csv_files",
+					"type": "PipelineReference"
+				}
+			}
+		],
 		"type": "BlobEventsTrigger",
 		"typeProperties": {
 			"blobPathBeginsWith": "/inputfolder/blobs/",
