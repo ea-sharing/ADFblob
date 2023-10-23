@@ -1,0 +1,17 @@
+{
+	"name": "trigger1",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/inputfolder/blobs/",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/46144725-e67d-4db1-a949-31ae0f25fb14/resourceGroups/project_resgrp/providers/Microsoft.Storage/storageAccounts/adfblobstorageaccount1",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}
