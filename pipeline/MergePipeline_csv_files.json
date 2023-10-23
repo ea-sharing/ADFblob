@@ -29,8 +29,8 @@
 						"storeSettings": {
 							"type": "AzureBlobStorageReadSettings",
 							"recursive": false,
-							"enablePartitionDiscovery": false,
-							"prefix": "output_"
+							"wildcardFileName": "*",
+							"enablePartitionDiscovery": false
 						},
 						"formatSettings": {
 							"type": "DelimitedTextReadSettings",
@@ -53,35 +53,6 @@
 					"validateDataConsistency": false,
 					"translator": {
 						"type": "TabularTranslator",
-						"mappings": [
-							{
-								"source": {
-									"name": "Input1",
-									"type": "Int64"
-								},
-								"sink": {
-									"name": "Input1"
-								}
-							},
-							{
-								"source": {
-									"name": "Input2",
-									"type": "Int64"
-								},
-								"sink": {
-									"name": "Input2"
-								}
-							},
-							{
-								"source": {
-									"name": "Sum",
-									"type": "Int64"
-								},
-								"sink": {
-									"name": "Sum"
-								}
-							}
-						],
 						"typeConversion": true,
 						"typeConversionSettings": {
 							"allowDataTruncation": false,
@@ -97,7 +68,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "SourceDataset_vqj",
+						"referenceName": "DestinationDataset_vqj",
 						"type": "DatasetReference"
 					}
 				]
