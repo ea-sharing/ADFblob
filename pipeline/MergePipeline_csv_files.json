@@ -28,9 +28,9 @@
 						"type": "DelimitedTextSource",
 						"storeSettings": {
 							"type": "AzureBlobStorageReadSettings",
-							"recursive": true,
-							"wildcardFileName": "*",
-							"enablePartitionDiscovery": false
+							"recursive": false,
+							"enablePartitionDiscovery": false,
+							"prefix": "output_"
 						},
 						"formatSettings": {
 							"type": "DelimitedTextReadSettings",
