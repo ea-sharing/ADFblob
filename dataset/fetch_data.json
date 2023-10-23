@@ -1,0 +1,18 @@
+{
+	"name": "fetch_data",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "fetch_csv_file",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Excel",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "inputfolder"
+			}
+		},
+		"schema": []
+	}
+}
