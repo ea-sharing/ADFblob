@@ -100,20 +100,7 @@
 					"firstRowAsHeader": true,
 					"quoteChar": "\""
 				},
-				"schema": [
-					{
-						"name": "Input1",
-						"type": "String"
-					},
-					{
-						"name": "Input2",
-						"type": "String"
-					},
-					{
-						"name": "Sum",
-						"type": "String"
-					}
-				]
+				"schema": []
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/linkedServices/fetch_csv_file')]"
@@ -151,8 +138,8 @@
 								"type": "DelimitedTextSource",
 								"storeSettings": {
 									"type": "AzureBlobStorageReadSettings",
-									"recursive": true,
-									"wildcardFileName": "*",
+									"recursive": false,
+									"wildcardFileName": "*.csv",
 									"enablePartitionDiscovery": false
 								},
 								"formatSettings": {
@@ -169,7 +156,7 @@
 								"formatSettings": {
 									"type": "DelimitedTextWriteSettings",
 									"quoteAllText": true,
-									"fileExtension": ".csv"
+									"fileExtension": ""
 								}
 							},
 							"enableStaging": false,
@@ -178,7 +165,7 @@
 								"type": "TabularTranslator",
 								"typeConversion": true,
 								"typeConversionSettings": {
-									"allowDataTruncation": true,
+									"allowDataTruncation": false,
 									"treatBooleanAsNumber": false
 								}
 							}
@@ -228,6 +215,7 @@
 				"type": "BlobEventsTrigger",
 				"typeProperties": {
 					"blobPathBeginsWith": "/inputfolder/blobs/",
+					"blobPathEndsWith": ".csv",
 					"ignoreEmptyBlobs": true,
 					"scope": "[parameters('trigger1_properties_typeProperties_scope')]",
 					"events": [
