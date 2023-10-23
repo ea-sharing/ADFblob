@@ -1,5 +1,5 @@
 {
-	"name": "SourceDataset2_vqj",
+	"name": "test_vqj",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "fetch_csv_file",
