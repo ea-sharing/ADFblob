@@ -53,6 +53,35 @@
 					"validateDataConsistency": false,
 					"translator": {
 						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "Input1",
+									"type": "Int64"
+								},
+								"sink": {
+									"name": "Input1"
+								}
+							},
+							{
+								"source": {
+									"name": "Input2",
+									"type": "Int64"
+								},
+								"sink": {
+									"name": "Input2"
+								}
+							},
+							{
+								"source": {
+									"name": "Sum",
+									"type": "Int64"
+								},
+								"sink": {
+									"name": "Sum"
+								}
+							}
+						],
 						"typeConversion": true,
 						"typeConversionSettings": {
 							"allowDataTruncation": false,
