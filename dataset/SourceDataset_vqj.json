@@ -18,19 +18,6 @@
 			"firstRowAsHeader": true,
 			"quoteChar": "\""
 		},
-		"schema": [
-			{
-				"name": "Input1",
-				"type": "String"
-			},
-			{
-				"name": "Input2",
-				"type": "String"
-			},
-			{
-				"name": "Sum",
-				"type": "String"
-			}
-		]
+		"schema": []
 	}
 }
