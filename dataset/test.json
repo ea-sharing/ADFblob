@@ -1,5 +1,5 @@
 {
-	"name": "test_vqj",
+	"name": "test",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "fetch_csv_file",
